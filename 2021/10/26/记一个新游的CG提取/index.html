@@ -20,19 +20,22 @@
     var CONFIG = {"hostname":"sh0wer1ee.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="开幕碎碎念终于还是开了个博客，以前也确实考虑过开一个，但是看repo创建时间就知道作者又摸了… 18-19年期间写过一些东西，发表在了朋友搭的blog上然后朋友沉迷地球OL导致一个月忘了续费，服务器直接升天，体验极差，所幸自己有保留word版。今天整理收藏夹看到了已经失效的博客链接，就干脆嫖github的好了，以后想写点什么东西的话可以玩玩。 至于要写什么东西，还没有什么头绪，兴致来了就写。生活、">
+  <meta name="description" content="前言忙，都忙，忙点好啊强烈建议购买密特罗德生存恐惧，不买的都踢了通关后回顾 3DS 的二代复刻追加内容，原来 17 年就铺垫好了呀… 回到正题，之前事前登录很久的游戏开服了，就上去看了一下。其实挺期待的，因为是我之前博客说的那家厂商的新游，CG 质量非常非常高——这次的卖点居然是 60 帧的动态 CG 与播片（其实 CG 也是播片，并不是真的在渲染 Spine 动画），而且有画风很熟悉的画师参与，">
 <meta property="og:type" content="article">
-<meta property="og:title" content="前言">
-<meta property="og:url" content="https://sh0wer1ee.github.io/2000/02/29/%E5%89%8D%E8%A8%80/index.html">
+<meta property="og:title" content="记一个新游的CG提取">
+<meta property="og:url" content="https://sh0wer1ee.github.io/2021/10/26/%E8%AE%B0%E4%B8%80%E4%B8%AA%E6%96%B0%E6%B8%B8%E7%9A%84CG%E6%8F%90%E5%8F%96/index.html">
 <meta property="og:site_name" content="sh0wer1ee&#39;s Blog">
-<meta property="og:description" content="开幕碎碎念终于还是开了个博客，以前也确实考虑过开一个，但是看repo创建时间就知道作者又摸了… 18-19年期间写过一些东西，发表在了朋友搭的blog上然后朋友沉迷地球OL导致一个月忘了续费，服务器直接升天，体验极差，所幸自己有保留word版。今天整理收藏夹看到了已经失效的博客链接，就干脆嫖github的好了，以后想写点什么东西的话可以玩玩。 至于要写什么东西，还没有什么头绪，兴致来了就写。生活、">
+<meta property="og:description" content="前言忙，都忙，忙点好啊强烈建议购买密特罗德生存恐惧，不买的都踢了通关后回顾 3DS 的二代复刻追加内容，原来 17 年就铺垫好了呀… 回到正题，之前事前登录很久的游戏开服了，就上去看了一下。其实挺期待的，因为是我之前博客说的那家厂商的新游，CG 质量非常非常高——这次的卖点居然是 60 帧的动态 CG 与播片（其实 CG 也是播片，并不是真的在渲染 Spine 动画），而且有画风很熟悉的画师参与，">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2000-02-28T15:00:00.000Z">
-<meta property="article:modified_time" content="2021-05-07T13:13:15.675Z">
+<meta property="og:image" content="https://sh0wer1ee.github.io/2021/10/26/%E8%AE%B0%E4%B8%80%E4%B8%AA%E6%96%B0%E6%B8%B8%E7%9A%84CG%E6%8F%90%E5%8F%96/deczip.png">
+<meta property="og:image" content="https://sh0wer1ee.github.io/2021/10/26/%E8%AE%B0%E4%B8%80%E4%B8%AA%E6%96%B0%E6%B8%B8%E7%9A%84CG%E6%8F%90%E5%8F%96/frida.png">
+<meta property="article:published_time" content="2021-10-26T13:00:34.000Z">
+<meta property="article:modified_time" content="2021-10-26T13:34:02.754Z">
 <meta property="article:author" content="sh0wer1ee">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://sh0wer1ee.github.io/2021/10/26/%E8%AE%B0%E4%B8%80%E4%B8%AA%E6%96%B0%E6%B8%B8%E7%9A%84CG%E6%8F%90%E5%8F%96/deczip.png">
 
-<link rel="canonical" href="https://sh0wer1ee.github.io/2000/02/29/%E5%89%8D%E8%A8%80/">
+<link rel="canonical" href="https://sh0wer1ee.github.io/2021/10/26/%E8%AE%B0%E4%B8%80%E4%B8%AA%E6%96%B0%E6%B8%B8%E7%9A%84CG%E6%8F%90%E5%8F%96/">
 
 
 <script id="page-configurations">
@@ -45,7 +48,7 @@
   };
 </script>
 
-  <title>前言 | sh0wer1ee's Blog</title>
+  <title>记一个新游的CG提取 | sh0wer1ee's Blog</title>
   
 
 
@@ -151,7 +154,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sh0wer1ee.github.io/2000/02/29/%E5%89%8D%E8%A8%80/">
+    <link itemprop="mainEntityOfPage" href="https://sh0wer1ee.github.io/2021/10/26/%E8%AE%B0%E4%B8%80%E4%B8%AA%E6%96%B0%E6%B8%B8%E7%9A%84CG%E6%8F%90%E5%8F%96/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -164,7 +167,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          前言
+          记一个新游的CG提取
         </h1>
 
         <div class="post-meta">
@@ -173,16 +176,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2000-02-29 00:00:00" itemprop="dateCreated datePublished" datetime="2000-02-29T00:00:00+09:00">2000-02-29</time>
+              <time title="创建时间：2021-10-26 22:00:34 / 修改时间：22:34:02" itemprop="dateCreated datePublished" datetime="2021-10-26T22:00:34+09:00">2021-10-26</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-05-07 22:13:15" itemprop="dateModified" datetime="2021-05-07T22:13:15+09:00">2021-05-07</time>
-              </span>
 
           
 
@@ -195,15 +192,22 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="开幕碎碎念"><a href="#开幕碎碎念" class="headerlink" title="开幕碎碎念"></a>开幕碎碎念</h1><p>终于还是开了个博客，以前也确实考虑过开一个，但是看repo创建时间就知道作者又摸了…</p>
-<p>18-19年期间写过一些东西，发表在了朋友搭的blog上<del>然后朋友沉迷地球OL导致一个月忘了续费，服务器直接升天</del>，体验极差，所幸自己有保留word版。今天整理收藏夹看到了已经失效的博客链接，就干脆嫖github的好了，以后想写点什么东西的话可以玩玩。</p>
-<p>至于要写什么东西，还没有什么头绪，兴致来了就写。生活、工作、娱乐可能都会写一写<del>反正没人看</del>。</p>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>忙，都忙，忙点好啊<br>强烈建议购买密特罗德生存恐惧，不买的都踢了<br>通关后回顾 3DS 的二代复刻追加内容，原来 17 年就铺垫好了呀…</p>
+<p>回到正题，之前事前登录很久的游戏开服了，就上去看了一下。其实挺期待的，因为是我之前博客说的那家厂商的新游，CG 质量非常非常高——<br>这次的卖点居然是 60 帧的动态 CG 与播片（其实 CG 也是播片，并不是真的在渲染 Spine 动画），而且有画风很熟悉的画师参与，也算是情怀加成（¿）<br>所以就简要谈两句，研究时间也没多长，所以肯定不会非常全面。</p>
 <span id="more"></span>
-<h1 id="小小的规划（不保证时效性）"><a href="#小小的规划（不保证时效性）" class="headerlink" title="小小的规划（不保证时效性）"></a>小小的规划（不保证时效性）</h1><ul>
-<li><strong>网站风格</strong>：目前是next的默认主题，体验就是中规中矩的性冷淡风格，打算改一下。虽然比较喜欢这种风格，但说实话有点烂大街了…字体也准备改一下，思源黑体体验还不错，不会犯错的保守字体。</li>
-<li><strong>功能</strong>：还没想好，好像也没什么要加的，md阅读器就要有阅读器的亚子，专一点最好。</li>
-<li><strong>其他</strong>：github pages速度挺捉急的，但我实在是懒得同步一份gitee（哪怕是写脚本），自用应该问题不大，摸。</li>
-</ul>
+
+<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="小背景"><a href="#小背景" class="headerlink" title="小背景"></a>小背景</h2><p>背景就不多说了，就是之前那家资源不加密的厂商，CG 可以递推 id 获取，也是上次奋发图强大改 assetname 的那家。<br>但质量过硬啊，冲了（双重意义），26 号开服就先看看网页版好了。</p>
+<h2 id="网页版初探"><a href="#网页版初探" class="headerlink" title="网页版初探"></a>网页版初探</h2><p>网页肯定是 wasm，怀念几个 cocos2d 的厂还能阅读 js 源码，所以只是来看看资源链接。<br>一直提示连接错误，还以为是太火热服务器 baozhale，结果是服务器要求东京时区，怒</p>
+<p>游戏开局就能跳所有教程，看 CG 时可以直接看目标片段（其他游戏里需要至少阅读完毕一次剧情），体验真不错…<br>发现会先下载故事 script，按需下载 CG，url 未加密但角色都是代号，不加密就好说。</p>
+<p>这游戏的音频视频是 acb/awb 和 usm 格式，是买了 Criware 的中间件，警觉了一下，可能还需要获取 CriLoggerKey。</p>
+<p>主数据库居然是 csv 压 zip 打包，还设了密码？我真的是第一次见到，惊呆了<br><img src="/2021/10/26/%E8%AE%B0%E4%B8%80%E4%B8%AA%E6%96%B0%E6%B8%B8%E7%9A%84CG%E6%8F%90%E5%8F%96/deczip.png" title="zip"></p>
+<p>此外还有一个文件表，但不包括 cg 的样子，里面根据 Spine 小人的数据特征（*.atlas.txt）可以反推代号，按照 url 格式可以获取所有 cg，完事了…<br>试着写了一个结果真就全弄下来了。那么还有什么继续的必要吗（？</p>
+<p>usm 扔到播放器里居然直接播了，都不需要 decryption key，倒是挺方便。</p>
+<p>比想象中快太多，就看看压缩包密码吧。</p>
+<h2 id="IDA！"><a href="#IDA！" class="headerlink" title="IDA！"></a>IDA！</h2><p>好像出了点问题，静态分析没处理好 struct，跳了几步看得头晕，摸了罢。</p>
+<h2 id="Frida-Hook！"><a href="#Frida-Hook！" class="headerlink" title="Frida Hook！"></a>Frida Hook！</h2><p>得，不和你费时间直接 hook，这种静态数据就应该优先用这个方法：<br><img src="/2021/10/26/%E8%AE%B0%E4%B8%80%E4%B8%AA%E6%96%B0%E6%B8%B8%E7%9A%84CG%E6%8F%90%E5%8F%96/frida.png" title="frida"><br>over，拿到了密码。<br>稍微读了一下包里的主数据库，它确实有利于 CG 解包流水线的编写（根据故事 type 去反推 CG 的 url，虽然不严谨但完全可行）。</p>
+<h2 id="官方嘲讽"><a href="#官方嘲讽" class="headerlink" title="官方嘲讽"></a>官方嘲讽</h2><p>安卓版安装完毕了，右上角怎么有个下载全部数据按钮..？<br>跑到应用目录下怎么所有 CG 都在？<br>WTF<br>也好，省得再写流水线了…</p>
+<p>好像也没学到什么，不过 CG 还是很好看</p>
 
     </div>
 
@@ -218,11 +222,11 @@
 
         
     <div class="post-nav">
-      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2021/05/16/%E5%A5%87%E6%80%AA%E7%9A%84%E6%A2%A6/" rel="next" title="记录一些奇怪的梦">
-      记录一些奇怪的梦 <i class="fa fa-chevron-right"></i>
+    <a href="/2021/09/20/%E9%9A%8F%E4%BE%BF%E5%86%99%E7%82%B9/" rel="prev" title="随便写点">
+      <i class="fa fa-chevron-left"></i> 随便写点
     </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -281,7 +285,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%80%E5%B9%95%E7%A2%8E%E7%A2%8E%E5%BF%B5"><span class="nav-number">1.</span> <span class="nav-text">开幕碎碎念</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B0%8F%E5%B0%8F%E7%9A%84%E8%A7%84%E5%88%92%EF%BC%88%E4%B8%8D%E4%BF%9D%E8%AF%81%E6%97%B6%E6%95%88%E6%80%A7%EF%BC%89"><span class="nav-number">2.</span> <span class="nav-text">小小的规划（不保证时效性）</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%AD%A3%E6%96%87"><span class="nav-number">2.</span> <span class="nav-text">正文</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B0%8F%E8%83%8C%E6%99%AF"><span class="nav-number">2.1.</span> <span class="nav-text">小背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E9%A1%B5%E7%89%88%E5%88%9D%E6%8E%A2"><span class="nav-number">2.2.</span> <span class="nav-text">网页版初探</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IDA%EF%BC%81"><span class="nav-number">2.3.</span> <span class="nav-text">IDA！</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Frida-Hook%EF%BC%81"><span class="nav-number">2.4.</span> <span class="nav-text">Frida Hook！</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%98%E6%96%B9%E5%98%B2%E8%AE%BD"><span class="nav-number">2.5.</span> <span class="nav-text">官方嘲讽</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
