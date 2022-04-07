@@ -20,12 +20,12 @@
     var CONFIG = {"hostname":"sh0wer1ee.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="前言这段时间真是忙的要死，摸了 20 天爽到不过晚上还是一有时间就去打魂 2 的白金，不得不说这一作还是最耐玩的，即使是高周目也有很强的可玩性，尤其是 3 个极为优秀的 DLC。 回到正题，引发这次研究的原因是之前的爬取某 DMM 页游HCG 的脚本突然崩了，今天花了一些时间研究了改动并重写了脚本，记录一下研究过程。">
+  <meta name="description" content="前言这段时间真是忙的要死，摸了 20 天爽到不过晚上还是一有时间就去打魂 2 的白金，不得不说这一作还是最耐玩的，即使是高周目也有很强的可玩性，尤其是 3 个极为优秀的 DLC。 回到正题，主要是之前的爬取某 DMM 页游HCG 的脚本突然崩了，今天花了一些时间研究了改动并重写了脚本，简单记录一下过程。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="记一次逆向————Debut &amp; Return">
 <meta property="og:url" content="https://sh0wer1ee.github.io/2021/06/04/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%80%86%E5%90%91/index.html">
 <meta property="og:site_name" content="sh0wer1ee&#39;s Blog">
-<meta property="og:description" content="前言这段时间真是忙的要死，摸了 20 天爽到不过晚上还是一有时间就去打魂 2 的白金，不得不说这一作还是最耐玩的，即使是高周目也有很强的可玩性，尤其是 3 个极为优秀的 DLC。 回到正题，引发这次研究的原因是之前的爬取某 DMM 页游HCG 的脚本突然崩了，今天花了一些时间研究了改动并重写了脚本，记录一下研究过程。">
+<meta property="og:description" content="前言这段时间真是忙的要死，摸了 20 天爽到不过晚上还是一有时间就去打魂 2 的白金，不得不说这一作还是最耐玩的，即使是高周目也有很强的可玩性，尤其是 3 个极为优秀的 DLC。 回到正题，主要是之前的爬取某 DMM 页游HCG 的脚本突然崩了，今天花了一些时间研究了改动并重写了脚本，简单记录一下过程。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://sh0wer1ee.github.io/2021/06/04/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%80%86%E5%90%91/01.png">
 <meta property="og:image" content="https://sh0wer1ee.github.io/2021/06/04/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%80%86%E5%90%91/02.png">
@@ -34,8 +34,8 @@
 <meta property="og:image" content="https://sh0wer1ee.github.io/2021/06/04/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%80%86%E5%90%91/05.png">
 <meta property="og:image" content="https://sh0wer1ee.github.io/2021/06/04/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%80%86%E5%90%91/06.png">
 <meta property="og:image" content="https://sh0wer1ee.github.io/2021/06/04/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%80%86%E5%90%91/07.png">
-<meta property="article:published_time" content="2021-06-04T13:24:15.000Z">
-<meta property="article:modified_time" content="2021-10-26T12:59:54.872Z">
+<meta property="article:published_time" content="2021-06-04T14:24:15.000Z">
+<meta property="article:modified_time" content="2022-04-07T18:45:40.839Z">
 <meta property="article:author" content="sh0wer1ee">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://sh0wer1ee.github.io/2021/06/04/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%80%86%E5%90%91/01.png">
@@ -182,14 +182,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2021-06-04 22:24:15" itemprop="dateCreated datePublished" datetime="2021-06-04T22:24:15+09:00">2021-06-04</time>
+              <time title="创建时间：2021-06-04 22:24:15" itemprop="dateCreated datePublished" datetime="2021-06-04T22:24:15+08:00">2021-06-04</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-10-26 21:59:54" itemprop="dateModified" datetime="2021-10-26T21:59:54+09:00">2021-10-26</time>
+                <time title="修改时间：2022-04-08 02:45:40" itemprop="dateModified" datetime="2022-04-08T02:45:40+08:00">2022-04-08</time>
               </span>
 
           
@@ -204,22 +204,28 @@
 
       
         <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>这段时间真是忙的要死，摸了 20 天<del>爽到</del><br>不过晚上还是一有时间就去打魂 2 的白金，不得不说这一作还是最耐玩的，即使是高周目也有很强的可玩性，尤其是 3 个极为优秀的 DLC。</p>
-<p>回到正题，引发这次研究的原因是之前的爬取某 DMM 页游<del>H</del>CG 的脚本突然崩了，今天花了一些时间研究了改动并重写了脚本，记录一下研究过程。</p>
+<p>回到正题，主要是之前的爬取某 DMM 页游<del>H</del>CG 的脚本突然崩了，今天花了一些时间研究了改动并重写了脚本，简单记录一下过程。</p>
 <span id="more"></span>
 
-<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="小背景"><a href="#小背景" class="headerlink" title="小背景"></a>小背景</h2><p>厂商的名字以及游戏名字暂且不表，但我和这个厂商蛮有缘分的…所以尽管这次研究也没什么困难，我还是想记录下来。</p>
-<p>因为它上一款已经关服的游戏，是我大学接触游戏解包与逆向的契机。它带有动态的<del>H</del>CG，质量相当不错，所以每次更新我都在 e 站对应的画廊等大佬更新 gif。但是好景不长，大佬弃坑了，当时正好出了一个好看的新角色，只好打开了这个游戏去抽，理所当然地没抽到。抱着试试的心态，我按了 f12 去看已有角色的 CG，结果发现资源 URL 是全明文而且没有任何防爬的验证措施，这样的话，我只要知道了动画资源文件的 URL pattern，在指定范围内构造一系列的 URL，访问 200 的话就保存下来不就好了？很稚嫩的思路，不过确实可行，当时正好学了一天的 Python，就按照以上的思路写了上古版本的资源爬取代码。<br>下载下来的数据是 unity 的 assetbundle，接着又去了解了 unity 相关的知识，最后解开发现是将 mp4 的二进制数据当做 TextAsset 封入 assetbundle。<br>我说怎么动起来的时候会卡一下，加载视频文件好费劲，现在大厂一般会和 Criware 这个强大的中间件厂 py 一下，用 usm 视频以及 acb/awb 音频。<br>↓ 凭借着下图这个脚本（初版），我在那个画廊评论区以 mega 链接的形式更新剩余的 mp4 文件，更了很久直到关服。</p>
+<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="小背景"><a href="#小背景" class="headerlink" title="小背景"></a>小背景</h2><p>厂商的名字以及游戏名字暂且不表，主要是我和这个厂商蛮有缘分的…所以尽管这次研究也没什么困难，我还是稍微记录一下好了。</p>
+<p>它上一款已经关服的游戏，是我大学接触游戏解包与逆向的契机。它带有动态CG，质量相当不错，但优化不得不说真的拉，打副本闪退可谓是家常便饭。试想想你打最高难度团灭，恰了抽卡用货币复活结果闪退了货币还消耗了不给返还，用户体验可以说是非常糟糕。所以我每次更新都在某e站对应的画廊等大佬更新gif。但是好景不长，大佬唐突弃坑跑路了，当时正好出了自认为不错的新角色，只能极不情愿地打开这个游戏去抽，理所当然地没抽到。抱着试试的心态，我按了f12去查看已有角色的CG，结果发现资源URL是全明文而且没有任何防爬的验证措施，这样的话，我只要知道了动画资源文件的 URL pattern，在指定范围内构造一系列的 URL，访问返回200的话就保存下来应该就可以拉取到所有CG了。很稚嫩的思路，but it works. 当时正好学了一天的 Python，就按照以上的思路写了上古版本的资源爬取代码。<br>下载下来的数据是unity的assetbundle，接着又去了解了unity相关的知识，最后解开发现是将mp4的二进制数据当做TextAsset封入assetbundle。</p>
+<p>在游戏中从静态过渡到动态时会卡一下，大概就是加载视频文件的开销吧…现在大厂一般会使用Criware这个强大的音视频中间件。<br>↓ 凭借着下图这个脚本（初版），我在那个画廊评论区以 mega 链接的形式更新剩余的 mp4 文件，更了很久直到关服。</p>
 <p><img src="/2021/06/04/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%80%86%E5%90%91/01.png" title="初代目代码"></p>
-<p>期间对脚本进行了小幅度改进，会记录已经保存的角色 id 到 csv 文件，下次跳过。<br>然后这公司推出了新的页游，资源访问方式与这个一模一样…老的脚本直接改一下 cdn 链接就能继续上岗了，真是服了，就这样继续用了一年半。<br>由于角色 id 不是连贯的，顺序访问可能会触发一吨的 403 或者 404。有一次因为官方提前实装了部分角色，等角色落地我没爬到，还以为是代码出了 bug，连着跑了好几次，最后检查资源才发现已经有了…期间从最开头的 id 往后遍历，估计这个时候触发了服务器报警（¿<br>不久后的一次更新后（就在前几天），脚本跑了根本就没动静，一看 log 返回的全是 404，心想着可能还在维护服务器，就等到晚上再跑了一遍，还是 404。<br>进游戏一看没有在维护，爬下 manifest 文件表一看文件确实有啊，真令人头大.jpg，就开了个角色剧情抓包一看，一看真是惊了，他们改了？！<br>难道是我导致的..?<br>↓f12 结果如下图，很明显 assetbundle 的名字被混淆了。</p>
+<p>期间对脚本进行了小幅度改进，会记录已经保存的角色 id 到 csv 文件，下次遍历的时候就跳过。<br>穷举id会不可避免地触发403/404，可能会导致厂商检查服务器log时注意到。</p>
+<p>然后关服后这公司推出了新的页游，资源存储方式与这个一模一样…老的脚本直接改一下 cdn 链接就能继续上岗了，就这样继续用了一年半。<br>顺便一提游戏优化真的一言难尽，和前作一样卡得要死，祖传框架？</p>
+<p>不久后的一次更新后（就在前几天），脚本跑了根本就没动静，一看 log 返回的全是 404，心想着可能还在维护服务器，就等到晚上再跑了一遍，还是 404。<br>进游戏一看没有在维护，爬下 manifest 文件表一看文件确实有。开了个角色剧情抓包一看，惊了，是一长串的hash。<br>↓f12</p>
 <p><img src="/2021/06/04/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%80%86%E5%90%91/02.png" title="f12"></p>
-<h2 id="开始研究（战况分析）"><a href="#开始研究（战况分析）" class="headerlink" title="开始研究（战况分析）"></a>开始研究（战况分析）</h2><p>这几年也没白摸，此类加密一般走一下逆向静态分析就能解决问题，之前也有处理过几个 unity 游戏。<br>首先分析一下 url 格式：<br><code>https://***.******.com/AssetBundles/DmmR18Web/ui/73285980484e56353254c0089894d7c46b218a8f7d0fc87652eaf93cb16c7589.assetbundle</code><br>明显被混淆的只有文件名，路径依然是明文，由于用户获取的文件表里是明文的文件名，接受的响应里也没有找到这些 url，因此可能是对文件名做了一系列的变换（比如 hash），因此还是要走一下静态分析。<br>下载了安卓端，把 lib 用 il2cppdumper 生成一下 dump.cs 就扔进了 ida，趁着 ida 在跑先思考一下变换函数的位置。先从发送下载请求的函数入手，搜<code>download</code>就找到了<code>AssetBundleDownloadUtility</code>类，一看成员函数便知道正是我们要找的。（太明显了）</p>
+<h2 id="开始研究（战况分析）"><a href="#开始研究（战况分析）" class="headerlink" title="开始研究（战况分析）"></a>开始研究（战况分析）</h2><p>一般而言此类加密一般走一下逆向静态分析基本能解决问题，但是太费时间不如frida直接hook。但对于我这种游戏都懒得下载打开安卓版的人来讲，我会选择前者。毕竟不注重资源防护的话，lib一般也不会混淆。</p>
+<p>但在这之前，先分析一下 url 格式：<br><code>https://***.******.com/AssetBundles/DmmR18Web/ui/73285980484e56353254c0089894d7c46b218a8f7d0fc87652eaf93cb16c7589.assetbundle</code><br>在manifest中文件名依然是明文，而请求URL是一串巨长的字符，通常是做了<code>filename-&gt;obscured filename</code>的映射处理。可能是对文件名做了一系列的变换（比如 hash），至于如何做的hash，那就需要静态分析了。</p>
+<p>从安卓端掏出lib和metadata，处理一下丢进ida。趁着ida在跑边翻<code>dump.cs</code>边思考一下变换函数的位置。</p>
+<p>这个时候一般是从发送下载请求的函数入手，从关键字可以检索到<code>AssetBundleDownloadUtility</code>类，简单扫一下结构，确实正好是我们要找的。</p>
 <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Namespace: App</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class</span> <span class="title">AssetBundleDownloadUtility</span> <span class="comment">// TypeDefIndex: 8847</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">// Fields</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">readonly</span> <span class="built_in">string</span> HASH_SALT; <span class="comment">// 0x0</span></span><br><span class="line">	<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">readonly</span> <span class="built_in">int</span> HASH_COUNT; <span class="comment">// 0x8</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">// Methods</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">customizeWebRequest</span>(<span class="params">UnityWebRequest webRequest</span>)</span>; <span class="comment">// RVA: 0x26B8EA4 Offset: 0x26B8EA4</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="built_in">string</span> <span class="title">makeAssetBundleFileNameHash</span>(<span class="params"><span class="built_in">string</span> assetBundlePath</span>)</span>; <span class="comment">// RVA: 0x26B8FC8 Offset: 0x26B8FC8</span></span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> .cctor(); <span class="comment">// RVA: 0x26B9040 Offset: 0x26B9040</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>从以上信息我们能够得知加盐了，而且循环计算了一定次数，具体细节就要看静态分析了，接下来转入 ida。</p>
-<h2 id="静态分析"><a href="#静态分析" class="headerlink" title="静态分析"></a>静态分析</h2><p>↓ 杀入<code>AssetBundleDownloadUtility</code>类，这种静态成员一般会在 ctor 或者 cctor 这种 constructor 里初始化值，如下图<br><img src="/2021/06/04/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%80%86%E5%90%91/03.png" title="constructor"><br>循环次数设为了 14，根据<code>StringLiteral_6415</code>对应的字符串我们也拿到了 salt（这里就不放出来了）<br>然后分析这个函数：</p>
+<p>成员变量暗示可能对文件名进行了加盐操作，以及循环计算了一定次数的hash，目标函数应该为<code>makeAssetBundleFileNameHash</code>。至此准备工作完成。</p>
+<h2 id="静态分析"><a href="#静态分析" class="headerlink" title="静态分析"></a>静态分析</h2><p>↓ 打开<code>AssetBundleDownloadUtility</code>类，此类静态变量一般会在ctor或者cctor等constructor中进行值的初始化。<br><img src="/2021/06/04/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%80%86%E5%90%91/03.png" title="constructor"><br>循环次数设为了 14，根据<code>StringLiteral_6415</code>对应的字符串我们也拿到了salt。<br>然后分析目标函数：</p>
 <figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Namespace: GameFrame</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class</span> <span class="title">AssetBundleUtility</span> <span class="comment">// TypeDefIndex: 5240</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">// Methods</span></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="built_in">string</span> <span class="title">makeHashAssetBundleFilePath</span>(<span class="params"><span class="built_in">string</span> assetBundlePath, <span class="built_in">string</span> salt, optional <span class="built_in">int</span> loopHashCount</span>)</span>; <span class="comment">// RVA: 0x183DC14 Offset: 0x183DC14</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><img src="/2021/06/04/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%80%86%E5%90%91/04.png" title="makeHashAssetBundleFilePath"><br>↑ 给临时变量改了名方便分析，画圈处即为关键代码，即将 url 中文件名主体（不含目录以及后缀）替换为<code>makeSha256Hash</code>返回的值，其中该函数的输入为文件名主体、循环次数以及盐。接下来顺着分析该函数。<br><img src="/2021/06/04/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%80%86%E5%90%91/05.png" title="makeSha256Hash 01"><br>↑ 如上图，清晰的 do-while 循环。<code>_ts</code>是 text 和 salt 拼接后的字符串，在上面没有截到。</p>
+<p><img src="/2021/06/04/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%80%86%E5%90%91/04.png" title="makeHashAssetBundleFilePath"><br>↑ 图中给临时变量进行更名操作方便分析，画圈处为关键代码，即将URL中文件名主体（不含目录以及后缀）替换为<code>makeSha256Hash</code>返回的值，其中该函数的输入为文件名主体、循环次数以及盐。<br><img src="/2021/06/04/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%80%86%E5%90%91/05.png" title="makeSha256Hash 01"><br>↑ 如上图，清晰的do-while循环。（<code>_ts</code>是 text 和 salt 拼接后的字符串，在上面没有截到。）</p>
 <ul>
 <li>A 区域表示在第一次循环之后，对该字符串的每个 byte 与<code>0x2C</code>相异或。</li>
 <li>B 区域对处理后的字符串计算 sha256。</li>
@@ -227,8 +233,8 @@
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> hashlib</span><br><span class="line"></span><br><span class="line"><span class="comment"># App.AssetBundleDownloadUtility$$.cctor</span></span><br><span class="line">HASH_SALT = <span class="string">&#x27;******************************&#x27;</span><span class="comment"># private</span></span><br><span class="line">HASH_COUNT = <span class="number">14</span></span><br><span class="line">XOR_VAL = <span class="string">b&#x27;\x2C&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># GameFrame.HashUtility$$makeSha256Hash</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">makeSha256Hash</span>(<span class="params">text, salt = HASH_SALT, loopHashCount = HASH_COUNT</span>):</span></span><br><span class="line">    text_salt = <span class="string">f&#x27;<span class="subst">&#123;text&#125;</span><span class="subst">&#123;salt&#125;</span>&#x27;</span></span><br><span class="line">    b_text_salt = text_salt.encode(<span class="string">&#x27;utf-8&#x27;</span>)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(loopHashCount):</span><br><span class="line">        <span class="keyword">if</span> i &gt;= <span class="number">1</span>:</span><br><span class="line">            b_text_salt = baxor(b_text_salt, XOR_VAL * <span class="built_in">len</span>(b_text_salt))</span><br><span class="line">        b_text_salt = hashlib.sha256(b_text_salt).digest()<span class="comment"># not hexdigest()</span></span><br><span class="line">    hashRes = res = <span class="string">&#x27;&#x27;</span>.join(<span class="built_in">format</span>(x, <span class="string">&#x27;02x&#x27;</span>) <span class="keyword">for</span> x <span class="keyword">in</span> b_text_salt)</span><br><span class="line">    <span class="built_in">print</span>(hashRes)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">baxor</span>(<span class="params">ba1, ba2</span>):</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">bytes</span>(a ^ b <span class="keyword">for</span> a,b <span class="keyword">in</span> <span class="built_in">zip</span>(ba1, ba2))</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    makeSha256Hash(<span class="string">&#x27;movie0188_scene01.mp4&#x27;</span>)</span><br><span class="line">    <span class="comment"># output: fffefb316d21387f88fc4de22e164ec3bb461b8f1af2a0da9faff190f6d81cc3</span></span><br></pre></td></tr></table></figure>
 
-<p>↓ 与实际结果测试，结果无误，问题解决。<br><img src="/2021/06/04/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%80%86%E5%90%91/07.png" title="f12 confirmed"><br>然后快乐地写了份根据文件表，仅下载更新档的脚本，完全自动化了，也算是解决了之前一直摸的问题。</p>
-<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>好奇怪的混淆方式，加盐异或外带循环 14 次，不过还是倒在了静态分析的淫威下。<br>如果用 frida 动态插桩，应该会更快，不过对付这个问题应该用不到。<br>比较适合新手当练手，线性流程单行道，函数命名清晰以及不是很难的处理。<br><del>ghs 是第一生产力</del></p>
+<p>↓ 与实际结果测试，结果无误，问题解决。<br><img src="/2021/06/04/%E8%AE%B0%E4%B8%80%E6%AC%A1%E9%80%86%E5%90%91/07.png" title="f12 confirmed"><br>然后顺便写了一份根据文件表，仅下载更新档的脚本，完全自动化了繁琐的操作。</p>
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>frida动态插桩可以更快地找到salt和循环次数，但是其过程不方便还原。实际上很多游戏的加密方法非常繁琐，动态调试完全是更优秀的方法。<br>总体感觉很适合新人静态分析入门）</p>
 
     </div>
 
@@ -248,7 +254,7 @@
       <i class="fa fa-chevron-left"></i> 记录一些奇怪的梦
     </a></div>
       <div class="post-nav-item">
-    <a href="/2021/09/20/%E9%9A%8F%E4%BE%BF%E5%86%99%E7%82%B9/" rel="next" title="随便写点">
+    <a href="/2021/09/19/%E9%9A%8F%E4%BE%BF%E5%86%99%E7%82%B9/" rel="next" title="随便写点">
       随便写点 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
@@ -351,7 +357,7 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2021</span>
+  <span itemprop="copyrightYear">2022</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
