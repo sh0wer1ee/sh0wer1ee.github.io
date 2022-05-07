@@ -22,20 +22,20 @@
 
   <meta name="description" content="前言之前事前登录很久的游戏开服了，就上去看了一下。其实挺期待的，因为是我之前博客说的那家厂商的又一个新游~这次的卖点是60帧的动态CG与播片（其实 CG 也是播片，并不是真的在渲染 Spine 动画），值得注意的是用了Criware。所以就简要谈两句，研究时间也没多长，所以肯定不会非常全面。但总体而言还是高估了对手（？">
 <meta property="og:type" content="article">
-<meta property="og:title" content="记一个新游的CG提取">
-<meta property="og:url" content="https://sh0wer1ee.github.io/2021/10/26/%E8%AE%B0%E4%B8%80%E4%B8%AA%E6%96%B0%E6%B8%B8%E7%9A%84CG%E6%8F%90%E5%8F%96/index.html">
+<meta property="og:title" content="逆向记录（代号legeclo）">
+<meta property="og:url" content="https://sh0wer1ee.github.io/2021/10/26/%E9%80%86%E5%90%91-legeclo/index.html">
 <meta property="og:site_name" content="sh0wer1ee&#39;s Blog">
 <meta property="og:description" content="前言之前事前登录很久的游戏开服了，就上去看了一下。其实挺期待的，因为是我之前博客说的那家厂商的又一个新游~这次的卖点是60帧的动态CG与播片（其实 CG 也是播片，并不是真的在渲染 Spine 动画），值得注意的是用了Criware。所以就简要谈两句，研究时间也没多长，所以肯定不会非常全面。但总体而言还是高估了对手（？">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://sh0wer1ee.github.io/2021/10/26/%E8%AE%B0%E4%B8%80%E4%B8%AA%E6%96%B0%E6%B8%B8%E7%9A%84CG%E6%8F%90%E5%8F%96/deczip.png">
-<meta property="og:image" content="https://sh0wer1ee.github.io/2021/10/26/%E8%AE%B0%E4%B8%80%E4%B8%AA%E6%96%B0%E6%B8%B8%E7%9A%84CG%E6%8F%90%E5%8F%96/frida.png">
+<meta property="og:image" content="https://sh0wer1ee.github.io/2021/10/26/%E9%80%86%E5%90%91-legeclo/deczip.png">
+<meta property="og:image" content="https://sh0wer1ee.github.io/2021/10/26/%E9%80%86%E5%90%91-legeclo/frida.png">
 <meta property="article:published_time" content="2021-10-26T14:00:34.000Z">
-<meta property="article:modified_time" content="2022-04-07T18:58:14.750Z">
+<meta property="article:modified_time" content="2022-05-07T04:50:12.615Z">
 <meta property="article:author" content="sh0wer1ee">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://sh0wer1ee.github.io/2021/10/26/%E8%AE%B0%E4%B8%80%E4%B8%AA%E6%96%B0%E6%B8%B8%E7%9A%84CG%E6%8F%90%E5%8F%96/deczip.png">
+<meta name="twitter:image" content="https://sh0wer1ee.github.io/2021/10/26/%E9%80%86%E5%90%91-legeclo/deczip.png">
 
-<link rel="canonical" href="https://sh0wer1ee.github.io/2021/10/26/%E8%AE%B0%E4%B8%80%E4%B8%AA%E6%96%B0%E6%B8%B8%E7%9A%84CG%E6%8F%90%E5%8F%96/">
+<link rel="canonical" href="https://sh0wer1ee.github.io/2021/10/26/%E9%80%86%E5%90%91-legeclo/">
 
 
 <script id="page-configurations">
@@ -48,7 +48,7 @@
   };
 </script>
 
-  <title>记一个新游的CG提取 | sh0wer1ee's Blog</title>
+  <title>逆向记录（代号legeclo） | sh0wer1ee's Blog</title>
   
 
 
@@ -154,7 +154,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sh0wer1ee.github.io/2021/10/26/%E8%AE%B0%E4%B8%80%E4%B8%AA%E6%96%B0%E6%B8%B8%E7%9A%84CG%E6%8F%90%E5%8F%96/">
+    <link itemprop="mainEntityOfPage" href="https://sh0wer1ee.github.io/2021/10/26/%E9%80%86%E5%90%91-legeclo/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -167,7 +167,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          记一个新游的CG提取
+          逆向记录（代号legeclo）
         </h1>
 
         <div class="post-meta">
@@ -184,7 +184,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-04-08 02:58:14" itemprop="dateModified" datetime="2022-04-08T02:58:14+08:00">2022-04-08</time>
+                <time title="修改时间：2022-05-07 12:50:12" itemprop="dateModified" datetime="2022-05-07T12:50:12+08:00">2022-05-07</time>
               </span>
 
           
@@ -211,11 +211,11 @@
 <h2 id="网页版初探"><a href="#网页版初探" class="headerlink" title="网页版初探"></a>网页版初探</h2><p>网页肯定是wasm，怀念几个cocos2d的厂还能阅读js源码<br>一直提示连接错误，还以为是太火热服务器baozhale，结果是服务器要求东京时区，怒</p>
 <p>游戏开局就能跳所有教程，看CG时可以直接看目标片段（其他游戏里需要至少阅读完毕一次剧情），不得不说用户体验至上<br>很多游戏一上来新手教程直接塞满还不能跳过，被迫看主线，大部分玩家期待的是开局送抽抽卡环节（吧</p>
 <p>在阅读剧情时发现会先下载故事script，从中按需下载CG，url未加密但角色都是代号，又双叒叕不加密。</p>
-<p>主数据库是csv压zip打包，设了密码…？反正我真的是第一次见到，惊呆了<br><img src="/2021/10/26/%E8%AE%B0%E4%B8%80%E4%B8%AA%E6%96%B0%E6%B8%B8%E7%9A%84CG%E6%8F%90%E5%8F%96/deczip.png" title="zip"></p>
+<p>主数据库是csv压zip打包，设了密码…？反正我真的是第一次见到，惊呆了<br><img src="/2021/10/26/%E9%80%86%E5%90%91-legeclo/deczip.png" title="zip"></p>
 <p>此外还有一个经典manifest，不包括cg的样子。但你可以从里面Spine小人的数据特征（*.atlas.txt）反推角色代号，按照URL格式就可以爬到所有CG，目标一完成<br>试着写了一个结果真就全弄下来了。那么还有什么继续的必要吗（？</p>
 <p>然后usm视频文件扔到播放器里居然直接播了，都不需要 Criware Key…目标三完成。<br>看看压缩包密码吧。</p>
 <h2 id="IDA打头阵"><a href="#IDA打头阵" class="headerlink" title="IDA打头阵"></a>IDA打头阵</h2><p>好像出了点问题，静态分析没处理好struct，跳了几步看得头晕，摸了罢。</p>
-<h2 id="Frida-Hook"><a href="#Frida-Hook" class="headerlink" title="Frida Hook"></a>Frida Hook</h2><p>秒了<br><img src="/2021/10/26/%E8%AE%B0%E4%B8%80%E4%B8%AA%E6%96%B0%E6%B8%B8%E7%9A%84CG%E6%8F%90%E5%8F%96/frida.png" title="frida"></p>
+<h2 id="Frida-Hook"><a href="#Frida-Hook" class="headerlink" title="Frida Hook"></a>Frida Hook</h2><p>秒了<br><img src="/2021/10/26/%E9%80%86%E5%90%91-legeclo/frida.png" title="frida"></p>
 <p>稍微读了一下包里的主数据库，可以用来获取全角色代号（但没必要），不过里面有未实装圣诞角色还是蛮有趣的。</p>
 <h2 id="官方嘲讽"><a href="#官方嘲讽" class="headerlink" title="官方嘲讽"></a>官方嘲讽</h2><p>安卓版安装完毕了，右上角怎么有个下载全部数据按钮..？<br>跑到应用目录下怎么所有CG都在？<br>WTF</p>
 <p>好像完全没学到什么，不过CG还是很好看<br>唉</p>
@@ -234,12 +234,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/09/19/%E9%9A%8F%E4%BE%BF%E5%86%99%E7%82%B9/" rel="prev" title="随便写点">
-      <i class="fa fa-chevron-left"></i> 随便写点
+    <a href="/2021/09/20/%E6%9D%82%E8%AE%B0/" rel="prev" title="杂记">
+      <i class="fa fa-chevron-left"></i> 杂记
     </a></div>
       <div class="post-nav-item">
-    <a href="/2022/05/02/%E6%96%B0%E6%B8%B8%E9%80%86%E5%90%91/" rel="next" title="（水）某新游CG提取（G）">
-      （水）某新游CG提取（G） <i class="fa fa-chevron-right"></i>
+    <a href="/2022/05/02/%E9%80%86%E5%90%91-grisen/" rel="next" title="逆向记录（代号grisen）">
+      逆向记录（代号grisen） <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -313,7 +313,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
