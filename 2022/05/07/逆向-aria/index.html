@@ -13,7 +13,7 @@
 
 <link rel="stylesheet" href="/css/main.css">
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:300,300italic,400,400italic,700,700italic%7CSource+Code+Pro:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/silver/pace-theme-minimal.css">
@@ -21,17 +21,17 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"sh0wer1ee.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.11.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="前言是新游戏喔~残念，旧的，开服半年了…这次为了逃避一下某高级计算机体系结构测试，简单看看。">
+    <meta name="description" content="前言: 是新游戏喔 残念，旧的，开服半年了…某高级计算机体系结构测试deadline中，摸鱼效率MAX，简单看看。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="逆向记录（代号aria）">
 <meta property="og:url" content="https://sh0wer1ee.github.io/2022/05/07/%E9%80%86%E5%90%91-aria/index.html">
 <meta property="og:site_name" content="sh0wer1ee&#39;s Blog">
-<meta property="og:description" content="前言是新游戏喔~残念，旧的，开服半年了…这次为了逃避一下某高级计算机体系结构测试，简单看看。">
+<meta property="og:description" content="前言: 是新游戏喔 残念，旧的，开服半年了…某高级计算机体系结构测试deadline中，摸鱼效率MAX，简单看看。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://sh0wer1ee.github.io/2022/05/07/%E9%80%86%E5%90%91-aria/multiple-headers.png">
 <meta property="og:image" content="https://sh0wer1ee.github.io/2022/05/07/%E9%80%86%E5%90%91-aria/frida-moviesalt.png">
 <meta property="article:published_time" content="2022-05-07T04:50:37.000Z">
-<meta property="article:modified_time" content="2022-05-09T07:08:58.066Z">
+<meta property="article:modified_time" content="2023-08-31T05:41:55.145Z">
 <meta property="article:author" content="sh0wer1ee">
 <meta property="article:tag" content="逆向">
 <meta name="twitter:card" content="summary">
@@ -91,7 +91,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">4</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">4</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">9</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">4</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">4</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">7</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -163,7 +163,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -264,7 +264,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-05-09 15:08:58" itemprop="dateModified" datetime="2022-05-09T15:08:58+08:00">2022-05-09</time>
+      <time title="修改时间：2023-08-31 13:41:55" itemprop="dateModified" datetime="2023-08-31T13:41:55+08:00">2023-08-31</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -304,7 +304,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>2.6k</span>
+      <span>2.7k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -322,19 +322,19 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>是新游戏喔~<br>残念，旧的，开服半年了…<br>这次为了逃避一下某高级计算机体系结构测试，简单看看。</p>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>: 是新游戏喔 <del>残念，旧的，开服半年了…</del><br>某高级计算机体系结构测试deadline中，摸鱼效率MAX，简单看看。</p>
 <span id="more"></span>
 
-<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="小背景"><a href="#小背景" class="headerlink" title="小背景"></a>小背景</h2><p>开服时有扫过一眼，感觉麻烦就没动，今天看到有朋友问，就试试好了。<br>卖点大概是全程3D演出罢…印象中是回合制，似乎有些奢侈。<br>我的祖传MI6开最高品质卡得不行了，不过不好证明是优化问题还是硬件问题…</p>
+<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="小背景"><a href="#小背景" class="headerlink" title="小背景"></a>小背景</h2><p>开服时有扫过一眼，感觉麻烦就没动，今天正好有朋友问，就试试好了。<br>亮点是剧情全程3D演出，游玩方式印象中是回合制。<br>我的祖传MI6开最高品质卡得不行了，不好证明是优化问题还是硬件问题。</p>
 <h2 id="初探——manifest与URL格式"><a href="#初探——manifest与URL格式" class="headerlink" title="初探——manifest与URL格式"></a>初探——manifest与URL格式</h2><p>manifest的包抓了一下，名字是</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://cdn.app.*********-aria.com/v11401_14c67a0bd0d3776b19350*********ca49292a2d43127663a3a2427951f731f8/assetbundle/WebGL_Hash/bf892ddb3aa0f7a9e7597e*********f6fe215dc6861328821b763325953c0</span><br></pre></td></tr></table></figure>
-<p>(打个电子码)<br>不得不说有点长，可以猜测v11401那一段是版本号+某个东西的sha256，assetbundle名字也被混淆为某个东西的sha256。分解一下就是<br><code>https://&#123;cdn地址&#125;/&#123;资源版本号相关&#125;/assetbundle/WebGL_hash/&#123;assetbundle的hash&#125;</code>。</p>
-<p>资源版本号相关的可以每次拉取manifest的时候记录一下，就不需要去搞清楚如何计算的了。打开manifest看了一眼，里面记录是正常的asset名字，推测与<a href="../../../../2021/06/04/%E9%80%86%E5%90%91-ayaranbu/">之前某次研究</a>类似，即本地有一个自定义的sha256计算过程，需要走一下逆向。</p>
-<h2 id="初探——角色剧情"><a href="#初探——角色剧情" class="headerlink" title="初探——角色剧情"></a>初探——角色剧情</h2><p>打开角色剧情看一下相关的文件，加载剧情期间下载了2个文件，猜测是剧情scripts、资源文件（包含语音、图片等）。用AssetStudio（后续简称AS）打开报错了——资源可能加密了。AS报错蕴含的信息量很大：因为如果是AES或者其他能破坏掉header的加密方法，AS不会将之视为有效的Unity assets，也就不会走读取流程；说明是使用了Padding或者局部字符替换等不伤害header的操作。</p>
-<p>拖进hex editor一眼看出端倪——多个assetbundle头。<br><img src="/2022/05/07/%E9%80%86%E5%90%91-aria/multiple-headers.png" title="hex"></p>
-<p>删掉第二个header前的部分即可正常读取，是简单的Padding法。但padding size不是定值，测试只下几个不同的assetbundle具有不同的size。经过读取可以得知上述2个文件分别是图片CG包、语音包。</p>
-<p>剧情scripts不在上述文件内，很有可能是服务器下发的，一般而言它包含各种控制、剧情文本、剧情资源文件url。所以这个scripts对我们编写脚本作用最大。而服务器下发意味着经历过通信加密部分，我的话不到迫不得已完全不想碰这一部分，构造请求意味着要把所有需要计算的部分逆向搞清楚<del>也就是嫌麻烦</del>，参考以前写过的<a target="_blank" rel="noopener" href="https://gist.github.com/sh0wer1ee/357aab7c091f89c982f1ee8203b4313e">alicerecode的代码</a>…所以先继续前进。</p>
-<p>推进剧情到动态部分时追加下载了两个文件，走的URL格式为<br><code>https://&#123;cdn地址&#125;/&#123;资源版本号相关&#125;/Video/&#123;Video的hash&#125;</code>。不在assetbundle路径下说明没有像之前的某厂商，将mp4作为textasset打包成assetbundle。看了下hex里有ftypisom isomiso2avc1mp41等字样，说明就是raw mp4，真好。</p>
+<p>(打个电子码)<br>不得不说有点长，可以猜测v11401那一段是版本号+某个东西的sha256，assetbundle名字也被混淆为某个东西的sha256。格式总结一下就是<br><code>https://&#123;cdn地址&#125;/&#123;资源版本号相关&#125;/assetbundle/WebGL_hash/&#123;assetbundle的hash&#125;</code>。</p>
+<p>其中资源版本号相关的可以每次拉取manifest的时候记录一下作为常量，不需要也不太可能去搞清楚如何计算的了。<br>打开manifest看了一眼，里面记录是正常的asset名字，推测与<a href="../../../../2021/06/04/%E9%80%86%E5%90%91-ayaranbu/">之前某次研究</a>类似，即本地有一个自定义的sha256计算过程，需要走一下逆向。</p>
+<h2 id="初探——角色剧情"><a href="#初探——角色剧情" class="headerlink" title="初探——角色剧情"></a>初探——角色剧情</h2><p>打开角色剧情看一下相关的文件，加载剧情期间下载了2个文件，猜测是剧情scripts、资源文件（包含语音、图片等）。用AssetStudio（后续简称AS）打开报错了——资源可能加密了。AS报错蕴含的信息量很大：因为如果是AES等能破坏掉header的加密方法，AS不会将之视为有效的Unity assets，也就不会走读取流程；说明是使用了Padding或者局部字符替换等不伤害header的操作。（其实还有可能是Unity版本问题，这里不是）</p>
+<p>拖进hex editor一眼看出端倪——存在多个assetbundle头。<br><img src="/2022/05/07/%E9%80%86%E5%90%91-aria/multiple-headers.png" title="hex"></p>
+<p>删掉第二个header前的部分试了下可以正常读取——是简单的Padding法。<br>但padding size不是定值，测试只下几个不同的assetbundle具有不同的size。<br>总之经过读取可以得知上述2个文件分别是图片CG包、语音包。</p>
+<p>剧情scripts不在上述文件内，很有可能是在服务器返回等请求里，一般而言它包含各种控制、剧情文本、剧情资源文件url。因此<br>这个scripts对我们编写脚本作用最大。而服务器下发意味着经历过通信加密部分，想要构造请求意味着要把header里所有需要计算的部分逆向搞清楚，参考以前写过的<a target="_blank" rel="noopener" href="https://gist.github.com/sh0wer1ee/357aab7c091f89c982f1ee8203b4313e">alicerecode的代码</a>，先看看别的。</p>
+<p>推进剧情到动态部分时追加下载了两个文件，URL格式为<code>https://&#123;cdn地址&#125;/&#123;资源版本号相关&#125;/Video/&#123;Video的hash&#125;</code>。<br>在额外的Video路径下，说明没有把mp4打包成assetbundle，可能是raw asset。<br>看了下hex里有ftypisom isomiso2avc1mp41等字样，印证猜想。</p>
 <h2 id="幕间——整理一下"><a href="#幕间——整理一下" class="headerlink" title="幕间——整理一下"></a>幕间——整理一下</h2><p>目标是提取CG，那么逆向需要弄清楚这些</p>
 <ul>
 <li>静态png：文件类型是assetbundle，如何正确进行读取、如何计算assetbundle的hash</li>
@@ -354,15 +354,16 @@
 <li><strong>GetVideoHashName(string videoPath)</strong>:<br>难点来了。流程是按照hashFormat去把videoPath格式化为一个字符串，计算sha256即为结果。问题在于，hashFormat疑似app初始化时服务器下发、而videoPath在剧情scripts中，也是服务器下发。</li>
 </ul>
 <p>此时遗留问题为，如何简单获取hashFormat与videoPath？猜测的话，由于app初始化了hashFormat作为全局变量，因此所有videoPath都需遵循此格式参与后续计算。考虑到CDN开销，视频文件应当唯一，因此hashFormat应当也是唯一且至少在<strong>一个资源版本期间</strong>不会发生变动。videoPath也有可能是遵循一定的格式，比如<code>&#123;unit_id&#125;_&#123;scene_id&#125;.mp4</code>，混淆前具有易读性更符合开发者的习惯。</p>
-<p>总结一下就是我们直接从内存中扒出这两个变量即可。</p>
+<p>总结一下：静态分析没找到Format string，那直接动态地从内存中扒出这两个变量即可。</p>
 <h2 id="压轴——frida"><a href="#压轴——frida" class="headerlink" title="压轴——frida"></a>压轴——frida</h2><p>秒了<br><img src="/2022/05/07/%E9%80%86%E5%90%91-aria/frida-moviesalt.png" title="frida"></p>
-<p>可以假定videoPath符合这样的格式：<code>ADV/movie_&#123;unit_id&#125;_&#123;scene_id&#125;.mp4</code>，视频有两个就是01与02，角色id根据静态资源来就好了。<br>hashFormat为<code>bless_turn_into_curse_&#123;videoPath&#125;</code>。（有点像寓言里bless不正确使用就会变成curse…不过有没有可能在讽刺搞逆向的¿）</p>
-<p>编写脚本进行测试，结论正确。不过懒得发gist了，代码好丑…不过还是贴一下核心部分。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">INPUT_FORMAT = <span class="string">&#x27;&#123;0&#125;+&#123;1&#125;+gpl_ab&#x27;</span></span><br><span class="line">MP4_INPUT_FORMAT = <span class="string">&#x27;bless_turn_into_curse_&#123;0&#125;&#x27;</span></span><br><span class="line">MP4_1_FORMAT = <span class="string">&#x27;ADV/movie_&#123;0&#125;_01.mp4&#x27;</span></span><br><span class="line">MP4_2_FORMAT = <span class="string">&#x27;ADV/movie_&#123;0&#125;_02.mp4&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">GetHashName</span>(<span class="params">abName, abHash128=<span class="string">&#x27;&#x27;</span></span>):</span></span><br><span class="line">    inputStr = INPUT_FORMAT.<span class="built_in">format</span>(abName, abHash128) <span class="keyword">if</span> abHash128 <span class="keyword">else</span> MP4_INPUT_FORMAT.<span class="built_in">format</span>(abName)</span><br><span class="line">    hashRes = hashlib.sha256(inputStr.encode(<span class="string">&#x27;utf-8&#x27;</span>)).digest()</span><br><span class="line">    hashResHexStr = <span class="string">&#x27;&#x27;</span>.join(<span class="built_in">format</span>(x, <span class="string">&#x27;02x&#x27;</span>) <span class="keyword">for</span> x <span class="keyword">in</span> hashRes)</span><br><span class="line">    <span class="keyword">return</span> hashResHexStr</span><br></pre></td></tr></table></figure>
+<p>可以假定videoPath符合这样的格式：<code>ADV/movie_&#123;unit_id&#125;_&#123;scene_id&#125;.mp4</code>，视频有两个就是01与02，角色id根据静态资源来就好了。<br>hashFormat为<code>bless_turn_into_curse_&#123;videoPath&#125;</code>。</p>
+<p>编写脚本进行测试，结论正确。懒得发gist了，贴一下核心部分。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># asset &amp; video path to hash</span></span><br><span class="line">INPUT_FORMAT = <span class="string">&#x27;&#123;0&#125;+&#123;1&#125;+gpl_ab&#x27;</span></span><br><span class="line">MP4_INPUT_FORMAT = <span class="string">&#x27;bless_turn_into_curse_&#123;0&#125;&#x27;</span></span><br><span class="line">MP4_1_FORMAT = <span class="string">&#x27;ADV/movie_&#123;0&#125;_01.mp4&#x27;</span></span><br><span class="line">MP4_2_FORMAT = <span class="string">&#x27;ADV/movie_&#123;0&#125;_02.mp4&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">GetHashName</span>(<span class="params">abName, abHash128=<span class="string">&#x27;&#x27;</span></span>):</span></span><br><span class="line">    inputStr = INPUT_FORMAT.<span class="built_in">format</span>(abName, abHash128) <span class="keyword">if</span> abHash128 <span class="keyword">else</span> MP4_INPUT_FORMAT.<span class="built_in">format</span>(abName)</span><br><span class="line">    hashRes = hashlib.sha256(inputStr.encode(<span class="string">&#x27;utf-8&#x27;</span>)).digest()</span><br><span class="line">    hashResHexStr = <span class="string">&#x27;&#x27;</span>.join(<span class="built_in">format</span>(x, <span class="string">&#x27;02x&#x27;</span>) <span class="keyword">for</span> x <span class="keyword">in</span> hashRes)</span><br><span class="line">    <span class="keyword">return</span> hashResHexStr</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># let UnityPy read unpadded part</span></span><br><span class="line">index = f.read().rfind(<span class="string">b&#x27;UnityFS\x00\x00\x00\x00&#x27;</span>)</span><br><span class="line">    <span class="keyword">if</span> index != -<span class="number">1</span>:</span><br><span class="line">        f.seek(index)</span><br><span class="line">        env = UnityPy.load(f.read())</span><br></pre></td></tr></table></figure>
 
 <h1 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h1><p>如果hashFormat发生变动了，再走一遍frida即可解决。<br>嗯，就这样。</p>
+<p>更新：现在早已关服，官方上架了离线版的archive。不算贵，已经买了。</p>
 
     </div>
 

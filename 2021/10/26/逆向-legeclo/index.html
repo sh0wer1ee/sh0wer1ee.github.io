@@ -13,7 +13,7 @@
 
 <link rel="stylesheet" href="/css/main.css">
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:300,300italic,400,400italic,700,700italic%7CSource+Code+Pro:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/silver/pace-theme-minimal.css">
@@ -21,17 +21,17 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"sh0wer1ee.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.11.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="前言之前事前登录很久的游戏开服了，就上去看了一下。其实挺期待的わくわく这次的卖点是播片全部60帧，值得注意的是用了Criware。所以就简要谈两句，研究时间也没多长，所以肯定不会非常全面。 剧透：总体而言还是高估了对手（？">
+    <meta name="description" content="前言事前登录很久的游戏开服了，就上去看了一下。宣传的卖点是播片全部60帧，用了Criware。简要写点，研究时间也没多长，所以肯定不会非常全面。 剧透：高估了">
 <meta property="og:type" content="article">
 <meta property="og:title" content="逆向记录（代号legeclo）">
 <meta property="og:url" content="https://sh0wer1ee.github.io/2021/10/26/%E9%80%86%E5%90%91-legeclo/index.html">
 <meta property="og:site_name" content="sh0wer1ee&#39;s Blog">
-<meta property="og:description" content="前言之前事前登录很久的游戏开服了，就上去看了一下。其实挺期待的わくわく这次的卖点是播片全部60帧，值得注意的是用了Criware。所以就简要谈两句，研究时间也没多长，所以肯定不会非常全面。 剧透：总体而言还是高估了对手（？">
+<meta property="og:description" content="前言事前登录很久的游戏开服了，就上去看了一下。宣传的卖点是播片全部60帧，用了Criware。简要写点，研究时间也没多长，所以肯定不会非常全面。 剧透：高估了">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://sh0wer1ee.github.io/2021/10/26/%E9%80%86%E5%90%91-legeclo/deczip.png">
 <meta property="og:image" content="https://sh0wer1ee.github.io/2021/10/26/%E9%80%86%E5%90%91-legeclo/frida.png">
 <meta property="article:published_time" content="2021-10-26T14:00:34.000Z">
-<meta property="article:modified_time" content="2022-05-09T12:45:39.977Z">
+<meta property="article:modified_time" content="2023-08-29T16:23:01.625Z">
 <meta property="article:author" content="sh0wer1ee">
 <meta property="article:tag" content="逆向">
 <meta name="twitter:card" content="summary">
@@ -91,7 +91,7 @@
 
 
 <nav class="site-nav">
-  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">4</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">4</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">9</span></a></li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">4</span></a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">4</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">7</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -163,7 +163,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -264,7 +264,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-05-09 20:45:39" itemprop="dateModified" datetime="2022-05-09T20:45:39+08:00">2022-05-09</time>
+      <time title="修改时间：2023-08-30 00:23:01" itemprop="dateModified" datetime="2023-08-30T00:23:01+08:00">2023-08-30</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -304,7 +304,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1k</span>
+      <span>978</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -322,28 +322,28 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>之前事前登录很久的游戏开服了，就上去看了一下。其实挺期待的<del>わくわく</del><br>这次的卖点是播片全部60帧，值得注意的是用了Criware。<br>所以就简要谈两句，研究时间也没多长，所以肯定不会非常全面。</p>
-<p>剧透：总体而言还是高估了对手（？</p>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>事前登录很久的游戏开服了，就上去看了一下。<br>宣传的卖点是播片全部60帧，用了Criware。<br>简要写点，研究时间也没多长，所以肯定不会非常全面。</p>
+<p>剧透：高估了</p>
 <span id="more"></span>
 
-<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="小背景"><a href="#小背景" class="headerlink" title="小背景"></a>小背景</h2><p>背景就不多说了，就是上次奋发图强大改assetname的那家。<br>所以这次一定准备了非常强力的加密吧！<br>所以这次一定准备了非常强力的加密吧？（星战meme</p>
-<p>本次目标简简单单，为以下三点：</p>
+<h1 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h1><h2 id="小背景"><a href="#小背景" class="headerlink" title="小背景"></a>小背景</h2><p>背景不多说了，就是上次大改assetname的那家。<br>所以这次一定准备了非常强力的加密吧！<br>所以这次一定准备了非常强力的加密吧？（星战meme</p>
+<p>本次目标总结为以下三点：</p>
 <ul>
 <li>获取完整的资源爬取方式</li>
 <li>获取Criware Key</li>
-<li>获取主数据库加密Key</li>
+<li>调查Master Data</li>
 </ul>
-<h2 id="网页版初探"><a href="#网页版初探" class="headerlink" title="网页版初探"></a>网页版初探</h2><p>网页肯定是wasm，怀念当年几个cocos2d的厂还能阅读js源码。期间一直提示连接错误，还以为是太火热服务器baozhale，结果是服务器要求东京时区，怒</p>
-<p>游戏开局就能跳所有教程，看CG时可以直接看目标片段（其他游戏里需要至少阅读完毕一次剧情），用户体验方面确实是下了功夫。很多游戏一上来新手教程直接塞满还不能跳过，被迫推主线的枯燥副本，而大部分玩家期待的是开局送抽抽卡环节吧。可能是防止刷初始，不过倒是真的有日游记录全服リセマラ并根据人数进行奖励的。本质应该是无root手工刷初始通常会下载大量数据，CDN的钱划不来吧，因此有的游戏甚至实装了仅删除用户存档的功能，实现winwin。</p>
-<p>在阅读剧情时发现会先下载故事script，从中按需下载CG，url未加密但角色都是代号，又双叒叕不加密是吧。</p>
-<p>主数据库是csv压zip打包，而且设了密码。反正我真的是第一次见到，惊呆了<br><img src="/2021/10/26/%E9%80%86%E5%90%91-legeclo/deczip.png" title="zip"></p>
-<p>此外还有一个经典manifest，不包括cg的样子。但你可以从里面Spine小人的数据特征（*.atlas.txt）反推角色代号，按照URL格式就可以爬到所有CG，<strong>目标一完成</strong>。试着写了一个脚本结果真就全弄下来了。那么还有什么继续的必要吗（？</p>
-<p>然后usm视频文件扔到播放器里居然直接播了，都不需要 Criware Key…<strong>目标三完成</strong>。现在落幕太早了，看看压缩包密码吧。</p>
-<h2 id="IDA打头阵"><a href="#IDA打头阵" class="headerlink" title="IDA打头阵"></a>IDA打头阵</h2><p>好像出了点问题，静态分析没处理好struct，跳了几步看得头晕，摸了罢。猜测是初始化期间服务器下发。</p>
+<h2 id="网页版初探"><a href="#网页版初探" class="headerlink" title="网页版初探"></a>网页版初探</h2><p>怀念当年几个cocos2d的厂还能阅读js源码，现在都是wasm还不如直接去看安卓版的so。<br>期间一直提示连接错误，还以为是太火热服务器baozhale，结果是服务器要求东京时区，怒</p>
+<p>游戏开局能一键跳所有教程；观赏特别剧情时可以直接看后半部分，其他游戏里需要至少阅读完毕一次剧情）<br>看来用户体验方面确实是下了功夫。很多游戏一上来新手教程直接塞满还不能跳过，硬是把你按在主线几十分钟。<br>可是大部分（存疑）玩家期待的是开局送抽抽卡环节吧，难道是防止刷初始？<br>无Root手工删App刷初始会下载大量数据，CDN的钱划不来吧。<br>因此有的游戏甚至实装了仅删除用户存档的功能，甚至还有游戏记录全服リセマラ并根据人数进行奖励。</p>
+<p>在阅读剧情时发现会先下载故事script，再从中按需下载CG。url未加密，甚至包含角色代号。<br>主数据库是csv压zip打包，而且设了密码。反正我真的是第一次见到，惊呆了，道理我都懂.jpg</p>
+<p><img src="/2021/10/26/%E9%80%86%E5%90%91-legeclo/deczip.png" title="zip"></p>
+<p>此外还有一个经典manifest，不包括CG。但你可以从里面Spine小人的文件名（*.atlas.txt）直接拿到角色代号，再按照URL格式就可以爬到所有CG，<strong>目标一完成</strong>。试着写了一个脚本结果真就全弄下来了。那么还有什么继续的必要吗（？</p>
+<p>usm视频文件扔到播放器里居然直接播了，都不需要Criware Key…<strong>目标三完成</strong>。现在落幕未免过早，再看看压缩包密码吧。</p>
+<h2 id="IDA打头阵"><a href="#IDA打头阵" class="headerlink" title="IDA打头阵"></a>IDA打头阵</h2><p>好像出了点问题，静态分析没处理好struct，跳了几步看得头晕，摸了。猜测是初始化期间服务器下发。</p>
 <h2 id="Frida-Hook"><a href="#Frida-Hook" class="headerlink" title="Frida Hook"></a>Frida Hook</h2><p>秒了<br><img src="/2021/10/26/%E9%80%86%E5%90%91-legeclo/frida.png" title="frida"></p>
 <p>稍微读了一下包里的主数据库，可以用来获取全角色代号（但没必要），不过里面有未实装圣诞角色还是蛮有趣的。</p>
-<h2 id="官方嘲讽"><a href="#官方嘲讽" class="headerlink" title="官方嘲讽"></a>官方嘲讽</h2><p>安卓版安装完毕了，右上角怎么有个下载全部数据按钮..？<br>跑到应用目录下怎么所有CG都在？<br>WTF</p>
-<p>好像完全没学到什么，不过CG还是很好看，玩是不可能玩的<br>唉~</p>
+<h2 id="官方嘲讽"><a href="#官方嘲讽" class="headerlink" title="官方嘲讽"></a>官方嘲讽</h2><p>安卓版安装完毕了，右上角怎么有个下载全部数据按钮..？<br>下完了跑到应用目录下怎么所有CG都在？<br>WTF</p>
+<p>好像完全没学到什么，游戏看着还行，但玩是不可能玩的<br>走了</p>
 
     </div>
 
@@ -360,8 +360,8 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/09/20/%E6%9D%82%E8%AE%B0/" rel="prev" title="杂记">
-                  <i class="fa fa-chevron-left"></i> 杂记
+                <a href="/2021/06/04/%E9%80%86%E5%90%91-ayaranbu/" rel="prev" title="逆向记录（代号ayaranbu）">
+                  <i class="fa fa-chevron-left"></i> 逆向记录（代号ayaranbu）
                 </a>
             </div>
             <div class="post-nav-item">
